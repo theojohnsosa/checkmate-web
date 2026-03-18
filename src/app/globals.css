@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer-Semibold.woff") format("woff");
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Switzer", sans-serif;
+}
+
+body {
+  height: 100%;
+}
