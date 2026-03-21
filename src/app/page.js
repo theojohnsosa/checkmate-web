@@ -1,9 +1,15 @@
-export default function Home() {
+import React from 'react'
+
+import Header from './components/Header'
+
+const page = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between">
+    <>
+      <main className='flex flex-col w-full min-h-screen bg-[#F8F8F8]'>
         
       </main>
-    </div>
-  );
+    </>
+  )
 }
+
+export default page

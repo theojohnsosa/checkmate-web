@@ -1,6 +1,8 @@
 import "./globals.css";
 import localFont from "next/font/local";
 
+import Header from './components/Header'
+
 const switzer = localFont({
   src: [
     { path: "./fonts/Switzer-Regular.woff", weight: "400" },
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={switzer.className}>
+        <Header />
         {children}
       </body>
     </html>
