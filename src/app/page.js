@@ -1,12 +1,13 @@
 import React from 'react'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
 const page = () => {
   return (
     <>
-      <main className='flex flex-col items-center w-full min-h-screen bg-[#F8F8F8] px-[20px]'>
+      <main className='flex flex-col items-center w-full min-h-screen bg-[#F8F8F8] px-[20px] gap-[100px]'>
+
+        {/* Hero Section */}
         <div className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
           <Image className='w-full h-full object-cover rounded-2xl absolute inset-0 z-0'
             src='background-texture.svg'
@@ -23,7 +24,7 @@ const page = () => {
               <Image
                 src={'arrow.svg'}
                 alt='Right Arrow'
-                width={16} 
+                width={16}
                 height={16} />
             </Link>
             <Image
@@ -33,6 +34,53 @@ const page = () => {
               height={529} />
           </div>
         </div>
+
+        {/* Features Section */}
+        <div className='flex flex-col items-center justify-center w-full h-fit'>
+          <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
+            <h1 className='font-semibold text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
+            <p>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
+          </div>
+          <div className='grid grid-cols-3 gap-[20px] w-[1198px]'>
+            <div className='flex flex-col justify-between w-full h-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pb-[24px] pt-[74px] gap-[24px]'>
+              <Image className='mx-auto'
+                src={'attendance-streak.svg'}
+                alt='Mockup'
+                width={300}
+                height={232} />
+              <div className='flex flex-col'>
+                <h1 className='font-semibold text-[24px] text-white mb-[4px]'>Attendance Streak</h1>
+                <p className='text-[#D9D9D9]'>Keep your streak alive – every on-time check-in counts toward your record.</p>
+              </div>
+            </div>
+            <div className='flex flex-col justify-between w-full h-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pt-[24px] gap-[24px]'>
+              <div className='flex flex-col'>
+                <h1 className='font-semibold text-[24px] text-white mb-[4px]'>Class Creation</h1>
+                <p className='text-[#D9D9D9]'>Set up your class in seconds and let students join instantly – no complicated setup, no back-and-forth.</p>
+              </div>
+              <Image className='mx-auto'
+                src={'class-creation.svg'}
+                alt='Mockup'
+                width={207}
+                height={343} />
+            </div>
+            <div className='flex flex-col justify-between w-full h-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pb-[24px] pt-[74px] gap-[24px]'>
+              <Image className='mx-auto'
+                src={'seat-plan.svg'}
+                alt='Mockup'
+                width={300}
+                height={232} />
+              <div className='flex flex-col'>
+                <h1 className='font-semibold text-[24px] text-white mb-[4px]'>Seat Plan</h1>
+                <p className='text-[#D9D9D9]'>Assign seats, know exactly who's where, and make every session more organized.</p>
+              </div>
+            </div>
+            <div className='w-full h-[440px] rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136]'></div>
+            <div className='w-full h-[440px] rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136]'></div>
+            <div className='w-full h-[440px] rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136]'></div>
+          </div>
+        </div>
+
       </main>
     </>
   )
