@@ -156,6 +156,48 @@ const page = () => {
             </div>
           </div>
         </div>
+        <div className='flex flex-col items-center justify-center w-full h-fit'>
+          <div className='flex flex-col gap-[10px] text-center mb-[30px]'>
+            <h1 className='font-semibold text-[40px] leading-[100%]'>All You Need To Know<br />About Checkmate</h1>
+            <p>Frequently Asked Questions</p>
+          </div>
+          <div className='flex flex-row items-center justify-center gap-[20px]'>
+            <Link className='flex items-center justify-center w-[150px] h-[40px] py-[10px] px-[20px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
+              href={'/'}>
+              Get started
+            </Link>
+            <Link className='flex items-center justify-center w-[150px] h-[40px] py-[10px] px-[20px] bg-[#FFFFFF] border border-[#7DA183] shadow-md font-semibold text-black rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
+              href={'/'}>
+              Book a Call
+            </Link>
+          </div>
+          <div className='flex flex-col items-center w-[800px] h-fit gap-[20px]'>
+            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-sm'>
+              <h1 className='font-medium text-base'>What is Checkmate?</h1>
+              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
+            </div>
+            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
+              <h1 className='font-medium text-base'>Who is Checkmate for?</h1>
+              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
+            </div>
+            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
+              <h1 className='font-medium text-base'>Is Checkmate free to use?</h1>
+              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
+            </div>
+            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
+              <h1 className='font-medium text-base'>What devices does Checkmate support?</h1>
+              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
+            </div>
+            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
+              <h1 className='font-medium text-base'>Is my data safe?</h1>
+              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
+            </div>
+            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
+              <h1 className='font-medium text-base'>How can I get in touch or request support?</h1>
+              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
+            </div>
+          </div>
+        </div>
       </main>
     </>
   )
