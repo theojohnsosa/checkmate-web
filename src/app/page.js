@@ -5,10 +5,8 @@ import Link from 'next/link'
 const page = () => {
   return (
     <>
-      <main className='flex flex-col items-center w-full min-h-screen bg-[#F8F8F8] px-[20px] gap-[100px]'>
-
-        {/* Hero Section */}
-        <div className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
+      <main className='flex flex-col items-center w-full min-h-screen bg-[#F8F8F8] gap-[100px]'>
+        <div className='relative flex flex-col items-center justify-center w-[1400px] h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
           <Image className='w-full h-full object-cover rounded-2xl absolute inset-0 z-0'
             src='background-texture.svg'
             alt='Background Texture'
@@ -34,16 +32,12 @@ const page = () => {
               height={529} />
           </div>
         </div>
-
-        {/* Features Section */}
         <div className='flex flex-col items-center justify-center w-full h-fit'>
           <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
             <h1 className='font-semibold text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
             <p>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
           </div>
           <div className='grid grid-cols-3 grid-rows-2 gap-[20px] w-[1198px]'>
-
-            {/* Card 1 - Attendance Streak */}
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pb-[24px] pt-[74px] gap-[24px]'>
               <Image className='mx-auto'
                 src={'attendance-streak.svg'}
@@ -55,8 +49,6 @@ const page = () => {
                 <p className='text-[#D9D9D9]'>Keep your streak alive – every on-time check-in counts toward your record.</p>
               </div>
             </div>
-
-            {/* Card 2 - Class Creation */}
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pt-[24px] gap-[24px]'>
               <div className='flex flex-col'>
                 <h1 className='font-semibold text-[24px] text-white mb-[4px]'>Class Creation</h1>
@@ -68,8 +60,6 @@ const page = () => {
                 width={207}
                 height={343} />
             </div>
-
-            {/* Card 3 - Seat Plan */}
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pb-[24px] pt-[74px] gap-[24px]'>
               <Image className='mx-auto'
                 src={'seat-plan.svg'}
@@ -81,8 +71,6 @@ const page = () => {
                 <p className='text-[#D9D9D9]'>Assign seats, know exactly who's where, and make every session more organized.</p>
               </div>
             </div>
-
-            {/* Card 4 - False Attendance Detection */}
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pt-[74px] pb-[24px] gap-[24px]'>
               <Image className='mx-auto'
                 src={'false-attendance.svg'}
@@ -94,8 +82,6 @@ const page = () => {
                 <p className='text-[#D9D9D9]'>Flags suspicious check-ins so teachers always know attendance is accurate and honest.</p>
               </div>
             </div>
-
-            {/* Card 5 - Placeholder */}
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pt-[24px] gap-[24px]'>
               <div className='flex flex-col'>
                 <h1 className='font-semibold text-[24px] text-white mb-[4px]'>Early Bird Leaderboards</h1>
@@ -107,8 +93,6 @@ const page = () => {
                 width={207}
                 height={343} />
             </div>
-
-            {/* Card 6 - Placeholder */}
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pt-[74px] pb-[24px] gap-[24px]'>
               <Image className='mx-auto'
                 src={'class-management.svg'}
@@ -120,10 +104,58 @@ const page = () => {
                 <p className='text-[#D9D9D9]'>View, edit, and organize all your classes in one place – everything under control, always.</p>
               </div>
             </div>
-
           </div>
         </div>
-
+        <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px]'>
+          <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
+            <h1 className='font-semibold text-[40px] text-white leading-[100%]'>Everything Checkmate<br />Does For You</h1>
+            <p className='text-white'>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
+          </div>
+          <div className='grid grid-cols-3 grid-rows-1 gap-[20px] w-fit'>
+            <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
+              <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
+                <div className='bg-[#7DA183] p-[10px] rounded-xl'>
+                  <Image
+                    src={'problem.svg'}
+                    alt='Alert'
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <h1 className='font-medium text-[20px]'>The Problem</h1>
+              </div>
+              <p>Classrooms were drowning in clipboards and spreadsheets. Teachers wasted precious minutes on roll call. Students found ways to slip through the cracks. Something had to change.</p>
+            </div>
+            <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
+              <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
+                <div className='bg-[#7DA183] p-[10px] rounded-xl'>
+                  <Image
+                    src={'idea.svg'}
+                    alt='Idea'
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <h1 className='font-medium text-[20px]'>The Idea</h1>
+              </div>
+              <p>What if attendance could track itself? What if students were actually motivated to show up on time? Checkmate was born from those questions — built by students who lived the problem firsthand.</p>
+            </div>
+            <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
+              <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
+                <div className='bg-[#7DA183] p-[10px] rounded-xl'>
+                  <Image
+                    src={'mission.svg'}
+                    alt='Mission'
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <h1 className='font-medium text-[20px]'>The Mission</h1>
+              </div>
+              <p>Today, Checkmate is a platform built for both teachers and students. Less busywork, more accountability, and a smarter classroom experience — one check-in at a time.</p>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   )
