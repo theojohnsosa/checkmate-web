@@ -5,8 +5,8 @@ import Link from 'next/link'
 const page = () => {
   return (
     <>
-      <main className='flex flex-col items-center w-full min-h-screen bg-[#F8F8F8] gap-[100px]'>
-        <div className='relative flex flex-col items-center justify-center w-[1400px] h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
+      <main className='flex flex-col items-center w-full px-[20px] min-h-screen bg-[#F8F8F8] gap-[100px]'>
+        <div className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
           <Image className='w-full h-full object-cover rounded-2xl absolute inset-0 z-0'
             src='background-texture.svg'
             alt='Background Texture'
@@ -18,7 +18,7 @@ const page = () => {
             <p className='text-white text-center text-[#D9D9D9]'>Mark attendance in seconds, spot patterns instantly, and keep everything<br />in one place – no spreadsheets, no clipboards, no hassle.</p>
             <Link className='flex items-center justify-center gap-[6px] w-[150px] h-[40px] py-[10px] px-[22px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
               href={'/'}>
-              See Semo
+              See Demo
               <Image
                 src={'arrow.svg'}
                 alt='Right Arrow'
@@ -106,10 +106,10 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px]'>
+        <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] rounded-xl'>
           <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
-            <h1 className='font-semibold text-[40px] text-white leading-[100%]'>Everything Checkmate<br />Does For You</h1>
-            <p className='text-white'>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
+            <h1 className='font-semibold text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
+            <p className='text-white'>Checkmate didn't come from a boardroom – it came from a classroom.<br />Built by people who knew there had to be a better way.</p>
           </div>
           <div className='grid grid-cols-3 grid-rows-1 gap-[20px] w-fit'>
             <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
@@ -156,7 +156,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center w-full h-fit'>
+        <div className='flex flex-col items-center justify-center w-full h-fit mb-[100px]'>
           <div className='flex flex-col gap-[10px] text-center mb-[30px]'>
             <h1 className='font-semibold text-[40px] leading-[100%]'>All You Need To Know<br />About Checkmate</h1>
             <p>Frequently Asked Questions</p>
