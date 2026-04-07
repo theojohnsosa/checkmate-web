@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -37,7 +39,7 @@ const page = () => {
             <h1 className='font-semibold text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
             <p>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
           </div>
-          <div className='grid grid-cols-3 grid-rows-2 gap-[20px] w-[1198px]'>
+          <div className='grid grid-cols-3 grid-rows-2 gap-[20px] w-full'>
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pb-[24px] pt-[74px] gap-[24px]'>
               <Image className='mx-auto'
                 src={'attendance-streak.svg'}
