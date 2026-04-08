@@ -7,17 +7,17 @@ import Link from 'next/link'
 const page = () => {
   return (
     <>
-      <main className='flex flex-col items-center w-full px-[20px] min-h-screen bg-[#F8F8F8] gap-[100px]'>
+      <main className='flex flex-col items-center w-full px-[20px] min-h-screen bg-[#F8F8F8] gap-[70px] md:gap-[100px]'>
         <div className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
           <Image className='w-full h-full object-cover rounded-2xl absolute inset-0 z-0'
             src='background-texture.svg'
             alt='Background Texture'
             width={1200}
             height={1031} />
-          <div className='flex flex-col items-center justify-center w-fit h-fit gap-[30px] pt-[80px] relative z-10'>
-            <p className='flex items-center bg-[#E3E6E3] w-[140px] h-[40px] py-[10px] px-[32px] rounded-full font-medium'>Education</p>
-            <h1 className='font-semibold text-[60px] leading-[80%] text-center text-white'>Mark present. Move forward.<br />No more messy sheets</h1>
-            <p className='text-white text-center text-[#D9D9D9]'>Mark attendance in seconds, spot patterns instantly, and keep everything<br />in one place – no spreadsheets, no clipboards, no hassle.</p>
+          <div className='flex flex-col items-center justify-center w-fit h-fit gap-[20px] md:gap-[30px] pt-[80px] relative z-10'>
+            <p className='flex items-center justify-center bg-[#E3E6E3] w-[107px] md:w-[140px] h-[30px] md:h-[40px] py-[10px] px-[32px] text-[12px] md:text-[16px] rounded-full font-medium'>Education</p>
+            <h1 className='font-semibold text-[50px] md:text-[60px] leading-[85%] text-center text-white w-100 md:w-fit'>Mark present. Move forward.<br />No more messy sheets</h1>
+            <p className='text-white text-center text-[#D9D9D9] text-[14px] md:text-normal'>Mark attendance in seconds, spot patterns instantly, and keep everything<br />in one place – no spreadsheets, no clipboards, no hassle.</p>
             <Link className='flex items-center justify-center gap-[6px] w-[150px] h-[40px] py-[10px] px-[22px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
               href={'/'}>
               See Demo
@@ -35,11 +35,11 @@ const page = () => {
           </div>
         </div>
         <div className='flex flex-col items-center justify-center w-full h-fit'>
-          <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
-            <h1 className='font-semibold text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
-            <p>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
+          <div className='flex flex-col gap-[10px] text-center mb-[30px] md:mb-[60px]'>
+            <h1 className='font-semibold text-[36px] md:text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
+            <p className='text-[14px] md:text-[16px]'>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
           </div>
-          <div className='grid grid-cols-3 grid-rows-2 gap-[20px] w-full'>
+          <div className='grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-[20px] w-full'>
             <div className='flex flex-col justify-between w-full rounded-2xl shadow-lg bg-gradient-to-b from-[#7DA183] to-[#315136] px-[24px] pb-[24px] pt-[74px] gap-[24px]'>
               <Image className='mx-auto'
                 src={'attendance-streak.svg'}
@@ -110,10 +110,10 @@ const page = () => {
         </div>
         <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] rounded-xl'>
           <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
-            <h1 className='font-semibold text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
-            <p className='text-white'>Checkmate didn't come from a boardroom – it came from a classroom.<br />Built by people who knew there had to be a better way.</p>
+            <h1 className='font-semibold text-[36px] md:text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
+            <p className='text-white text-[14px] md:text-[16px]'>Checkmate didn't come from a boardroom – it came from a classroom.<br />Built by people who knew there had to be a better way.</p>
           </div>
-          <div className='grid grid-cols-3 grid-rows-1 gap-[20px] w-fit'>
+          <div className='grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-[20px] w-fit'>
             <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
                 <div className='bg-[#7DA183] p-[10px] rounded-xl'>
@@ -173,7 +173,7 @@ const page = () => {
               Book a Call
             </Link>
           </div>
-          <div className='flex flex-col items-center w-[800px] h-fit gap-[20px]'>
+          <div className='flex flex-col items-center w-[400px] md:w-[800px] h-fit gap-[10px] md:gap-[20px]'>
             <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-sm'>
               <h1 className='font-medium text-base'>What is Checkmate?</h1>
               <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
