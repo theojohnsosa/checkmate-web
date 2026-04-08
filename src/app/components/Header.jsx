@@ -5,11 +5,24 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMenuOpen(false);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  });
 
   return (
     <>
