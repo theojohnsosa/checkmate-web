@@ -48,7 +48,7 @@ const Header = () => {
           <Link href={'/login'} className='hover:font-semibold'>Login</Link>
           <Link href={'/download'} className='flex items-center bg-[#7DA183] w-[120px] h-[40px] py-[13px] px-[22px] font-semibold text-white rounded-md hover:bg-[#A4DBAE] transition-colors'>Download</Link>
         </div>
-        <button className="md:hidden" onClick={() => setMenuOpen(true)}>
+        <button className="md:hidden hover:cursor-pointer" onClick={() => setMenuOpen(true)}>
             <Image 
               src={'menu.svg'}
               alt='Hamburger Menu'
@@ -58,15 +58,31 @@ const Header = () => {
         </button>
       </header>
       {menuOpen && (
-        <div className='fixed top-0 right-0 h-full w-70 bg-[#F2F0EF] border-l border-[#E0E0E0] z-2 shadow-lg flex flex-col'>
-          <button onClick={() => setMenuOpen(true)}>
+        <div className='fixed top-0 right-0 h-full w-70 bg-[#F2F0EF] border-l border-[#E0E0E0] z-100 shadow-lg flex flex-col py-[20px] px-[20px]'>
+          <button className='flex justify-end hover:cursor-pointer' onClick={() => setMenuOpen(false)}>
             <Image 
-              src={'menu.svg'}
-              alt='Hamburger Menu'
+              src={'close.svg'}
+              alt='Close'
               width={22}
               height={22}
             />
           </button>
+          <Image className='flex mx-auto mt-[40px]' 
+            src={'sidebar-logo.svg'}
+            alt='Checkmate Logo'
+            width={160}
+            height={46} />
+          <div className='flex flex-col mt-[50px] leading-[50px]'>
+            <Link href={'/'} className='text-[40px] font-semibold'>HOME</Link>
+            <Link href={'/features'} className='text-[40px] text-[#CCC3C3]'>FEATURES</Link>
+            <Link href={'/about'} className='text-[40px] text-[#CCC3C3]'>ABOUT</Link>
+            <Link href={'/faqs'} className='text-[40px] text-[#CCC3C3]'>FAQS</Link>
+          </div>
+          <div className='flex flex-col items-center justify-center gap-[10px] mt-auto'>
+            <p className='text-black'>View source code <span className='text-[#006EF4] underline'><Link href={'https://github.com/theojohnsosa/checkmate'}>here</Link></span></p>
+            <Link href={'/'} className='flex items-center justify-center bg-white text-[#7DA183] border-[2px] border-[#7DA183] rounded-lg py-[10px] px-[60px] font-semibold w-full'>Download</Link>
+            <Link href={'/'} className='flex items-center justify-center bg-[#7DA183] text-white rounded-lg py-[10px] px-[60px] font-semibold w-full'>Get Started</Link>
+          </div>
         </div>
       )}
     </>

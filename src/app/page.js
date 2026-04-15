@@ -4,7 +4,59 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { useState } from 'react'
+
+const faqs = [
+  {
+    question: "What is Checkmate?",
+    answer: "Checkmate is an attendance tracking application designed to help educators and students manage classroom attendance efficiently. It provides real-time insights into attendance patterns and helps maintain accurate records."
+  },
+  {
+    question: "Who is Checkmate for?",
+    answer: "Checkmate is built for teachers and students. Teachers can create classes, manage attendance sessions, and monitor real-time check-ins, while students can join classes, mark their attendance, and track their own history and streaks."
+  },
+  {
+    question: "Is Checkmate free to use?",
+    answer: "Checkmate is completely free to use. It was built and developed as a school project, and is open source — meaning other developers are welcome to use it as a template, contribute to it, or build on top of it. You can find the full source code on GitHub."
+  },
+  {
+    question: "What devices does Checkmate support?",
+    answer: "Checkmate is available as a native Android app (API Level 21+), which covers most Android phones and tablets running Android 5.0 Lollipop and above. A web version is also available via the landing page."
+  },
+  {
+    question: "Is my data safe?",
+    answer: "Yes. Checkmate uses Firebase Authentication for secure sign-in and Firebase Firestore for cloud data storage — both of which are backed by Google's security infrastructure. Your attendance records and account information are protected at every step"
+  },
+  {
+    question: "How can I get in touch or request support?",
+    answer: "You can open an issue directly on the Checkmate GitHub repository at github.com/theojohnsosa/checkmate/issues for bug reports, feature requests, or general questions."
+  },
+]
+
+const FAQItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <div className={`flex flex-col w-full bg-white px-[24px] py-[18px] rounded-xl shadow-sm cursor-pointer transition-all duration-200 ${isOpen ? 'border border-[#7DA183]' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+        <div className='flex items-center justify-between w-full'>
+          <h1 className='font-medium text-base'>{question}</h1>
+          <Image className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+            src={'arrow-down.svg'}
+            alt='Arrow Down'
+            width={20}
+            height={20} />
+        </div>
+        {isOpen && (
+          <p className='mt-[14px] text-[#9CA3AF] text-[15px] leading-relaxed'>{answer}</p>
+        )}
+      </div>
+    </>
+  )
+}
+
 const page = () => {
+
   return (
     <>
       <main className='flex flex-col items-center w-full px-[20px] min-h-screen bg-[#F8F8F8] gap-[70px] md:gap-[100px]'>
@@ -174,30 +226,9 @@ const page = () => {
             </Link>
           </div>
           <div className='flex flex-col items-center w-[400px] md:w-[800px] h-fit gap-[10px] md:gap-[20px]'>
-            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-sm'>
-              <h1 className='font-medium text-base'>What is Checkmate?</h1>
-              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
-            </div>
-            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
-              <h1 className='font-medium text-base'>Who is Checkmate for?</h1>
-              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
-            </div>
-            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
-              <h1 className='font-medium text-base'>Is Checkmate free to use?</h1>
-              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
-            </div>
-            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
-              <h1 className='font-medium text-base'>What devices does Checkmate support?</h1>
-              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
-            </div>
-            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
-              <h1 className='font-medium text-base'>Is my data safe?</h1>
-              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
-            </div>
-            <div className='flex items-center justify-between w-full h-[60px] bg-white px-[24px] rounded-xl shadow-md'>
-              <h1 className='font-medium text-base'>How can I get in touch or request support?</h1>
-              <Image src={'arrow-down.svg'} alt='Arrow Down' width={20} height={20} />
-            </div>
+            {faqs.map((faq, index) => (
+              <FAQItem key={index} question={faq.question} answer={faq.answer} />
+            ))}
           </div>
         </div>
       </main>
