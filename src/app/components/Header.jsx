@@ -6,10 +6,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -73,15 +75,15 @@ const Header = () => {
             width={160}
             height={46} />
           <div className='flex flex-col mt-[50px] leading-[50px]'>
-            <Link href={'/'} className='text-[40px] font-semibold'>HOME</Link>
-            <Link href={'/features'} className='text-[40px] text-[#CCC3C3]'>FEATURES</Link>
-            <Link href={'/about'} className='text-[40px] text-[#CCC3C3]'>ABOUT</Link>
-            <Link href={'/faqs'} className='text-[40px] text-[#CCC3C3]'>FAQS</Link>
+            <Link href='/' className={pathname === '/' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>HOME</Link>
+            <Link href='/features' className={pathname === '/features' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FEATURES</Link>
+            <Link href='/about' className={pathname === '/about' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>ABOUT</Link>
+            <Link href='/faqs' className={pathname === '/faqs' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FAQS</Link>
           </div>
           <div className='flex flex-col items-center justify-center gap-[10px] mt-auto'>
             <p className='text-black'>View source code <span className='text-[#006EF4] underline'><Link href={'https://github.com/theojohnsosa/checkmate'}>here</Link></span></p>
-            <Link href={'/'} className='flex items-center justify-center bg-white text-[#7DA183] border-[2px] border-[#7DA183] rounded-lg py-[10px] px-[60px] font-semibold w-full'>Download</Link>
-            <Link href={'/'} className='flex items-center justify-center bg-[#7DA183] text-white rounded-lg py-[10px] px-[60px] font-semibold w-full'>Get Started</Link>
+            <Link href={'/'} className='flex items-center justify-center bg-white text-[#7DA183] border-[2px] border-[#7DA183] rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-[#7DA183] hover:text-white hover:shadow-lg transition-colors'>Download</Link>
+            <Link href={'/'} className='flex items-center justify-center bg-[#7DA183] text-white rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-white hover:text-[#7DA183] hover:border-[#7DA183] hover:shadow-lg hover:bg-[#A4DBAE] transition-colors'>Get Started</Link>
           </div>
         </div>
       )}
