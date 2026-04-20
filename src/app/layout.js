@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+import { Analytics } from '@vercel/analytics/next'
+
 const switzer = localFont({
   src: [
     { path: "./fonts/Switzer-Regular.woff", weight: "400" },
@@ -23,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={switzer.className}>
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
