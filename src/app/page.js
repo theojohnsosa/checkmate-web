@@ -41,7 +41,7 @@ const FAQItem = ({ question, answer }) => {
       <div className={`flex flex-col w-full bg-white px-[24px] py-[18px] rounded-xl shadow-sm cursor-pointer transition-all duration-200 ${isOpen ? 'border border-[#7DA183]' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <div className='flex items-center justify-between w-full'>
           <h1 className='font-medium text-base'>{question}</h1>
-          <Image className={`transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          <Image className={`transition-transform duration-200 flex-shrink-0 ml-[12px] ${isOpen ? 'rotate-180' : ''}`}
             src={'arrow-down.svg'}
             alt='Arrow Down'
             width={20}
@@ -66,10 +66,10 @@ const page = () => {
             alt='Background Texture'
             width={1200}
             height={1031} />
-          <div className='flex flex-col items-center justify-center w-fit h-fit gap-[20px] md:gap-[30px] pt-[80px] relative z-10'>
+          <div className='flex flex-col items-center justify-center w-full h-fit gap-[20px] md:gap-[30px] pt-[80px] px-[24px] md:px-[40px] relative z-10'>
             <p className='flex items-center justify-center bg-[#E3E6E3] w-[107px] md:w-[140px] h-[30px] md:h-[40px] py-[10px] px-[32px] text-[12px] md:text-[16px] rounded-full font-medium'>Education</p>
-            <h1 className='font-semibold text-[50px] md:text-[60px] leading-[85%] text-center text-white w-100 md:w-fit'>Mark present. Move forward.<br />No more messy sheets</h1>
-            <p className='text-white text-center text-[#D9D9D9] text-[14px] md:text-normal'>Mark attendance in seconds, spot patterns instantly, and keep everything<br />in one place – no spreadsheets, no clipboards, no hassle.</p>
+            <h1 className='font-semibold text-[40px] sm:text-[50px] md:text-[60px] leading-[90%] text-center text-white w-full max-w-[700px]'>Mark present. Move forward. No more messy sheets</h1>
+            <p className='text-white text-center text-[14px] md:text-base max-w-[480px]'>Mark attendance in seconds, spot patterns instantly, and keep everything in one place – no spreadsheets, no clipboards, no hassle.</p>
             <Link className='flex items-center justify-center gap-[6px] w-[150px] h-[40px] py-[10px] px-[22px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
               href={'/'}>
               See Demo
@@ -86,6 +86,7 @@ const page = () => {
               height={529} />
           </div>
         </div>
+
         <div className='flex flex-col items-center justify-center w-full h-fit'>
           <div className='flex flex-col gap-[10px] text-center mb-[30px] md:mb-[60px]'>
             <h1 className='font-semibold text-[36px] md:text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
@@ -160,15 +161,16 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] rounded-xl'>
-          <div className='flex flex-col gap-[10px] text-center mb-[60px]'>
+
+        <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] px-[20px] md:px-[40px] rounded-xl'>
+          <div className='flex flex-col gap-[10px] text-center mb-[40px] md:mb-[60px]'>
             <h1 className='font-semibold text-[36px] md:text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
-            <p className='text-white text-[14px] md:text-[16px]'>Checkmate didn't come from a boardroom – it came from a classroom.<br />Built by people who knew there had to be a better way.</p>
+            <p className='text-white text-[14px] md:text-[16px]'>Checkmate didn't come from a boardroom – it came from a classroom.<br className='hidden md:block' />Built by people who knew there had to be a better way.</p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 grid-rows-1 gap-[20px] w-fit'>
-            <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-[20px] w-full'>
+            <div className='w-full h-fit p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
-                <div className='bg-[#7DA183] p-[10px] rounded-xl'>
+                <div className='bg-[#7DA183] p-[10px] rounded-xl flex-shrink-0'>
                   <Image
                     src={'problem.svg'}
                     alt='Alert'
@@ -180,9 +182,9 @@ const page = () => {
               </div>
               <p>Classrooms were drowning in clipboards and spreadsheets. Teachers wasted precious minutes on roll call. Students found ways to slip through the cracks. Something had to change.</p>
             </div>
-            <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
+            <div className='w-full h-fit p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
-                <div className='bg-[#7DA183] p-[10px] rounded-xl'>
+                <div className='bg-[#7DA183] p-[10px] rounded-xl flex-shrink-0'>
                   <Image
                     src={'idea.svg'}
                     alt='Idea'
@@ -194,9 +196,9 @@ const page = () => {
               </div>
               <p>What if attendance could track itself? What if students were actually motivated to show up on time? Checkmate was born from those questions — built by students who lived the problem firsthand.</p>
             </div>
-            <div className='w-[368] h-fit p-[30px] bg-white rounded-xl'>
+            <div className='w-full h-fit p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
-                <div className='bg-[#7DA183] p-[10px] rounded-xl'>
+                <div className='bg-[#7DA183] p-[10px] rounded-xl flex-shrink-0'>
                   <Image
                     src={'mission.svg'}
                     alt='Mission'
@@ -210,9 +212,10 @@ const page = () => {
             </div>
           </div>
         </div>
+
         <div className='flex flex-col items-center justify-center w-full h-fit mb-[100px]'>
-          <div className='flex flex-col gap-[10px] text-center mb-[30px]'>
-            <h1 className='font-semibold text-[40px] leading-[100%]'>All You Need To Know<br />About Checkmate</h1>
+          <div className='flex flex-col gap-[10px] text-center mb-[30px] px-[10px]'>
+            <h1 className='font-semibold text-[32px] md:text-[40px] leading-[100%]'>All You Need To Know<br />About Checkmate</h1>
             <p>Frequently Asked Questions</p>
           </div>
           <div className='flex flex-row items-center justify-center gap-[20px]'>
@@ -225,12 +228,13 @@ const page = () => {
               Book a Call
             </Link>
           </div>
-          <div className='flex flex-col items-center w-[400px] md:w-[800px] h-fit gap-[10px] md:gap-[20px]'>
+          <div className='flex flex-col items-center w-full md:w-[800px] h-fit gap-[10px] md:gap-[20px]'>
             {faqs.map((faq, index) => (
               <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </div>
+
       </main>
     </>
   )
