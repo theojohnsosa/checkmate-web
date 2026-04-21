@@ -61,7 +61,6 @@ const page = () => {
     <>
       <main className='flex flex-col items-center w-full px-[20px] min-h-screen bg-[#F8F8F8] gap-[70px] md:gap-[100px]'>
 
-        {/* Hero Section */}
         <div className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
           <Image className='w-full h-full object-cover rounded-2xl absolute inset-0 z-0'
             src='background-texture.svg'
@@ -89,7 +88,6 @@ const page = () => {
           </div>
         </div>
 
-        {/* Features Section */}
         <div className='flex flex-col items-center justify-center w-full h-fit'>
           <div className='flex flex-col gap-[10px] text-center mb-[30px] md:mb-[60px]'>
             <h1 className='font-semibold text-[36px] md:text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
@@ -165,7 +163,6 @@ const page = () => {
           </div>
         </div>
 
-        {/* About Section */}
         <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] px-[20px] md:px-[40px] rounded-xl'>
           <div className='flex flex-col gap-[10px] text-center mb-[40px] md:mb-[60px]'>
             <h1 className='font-semibold text-[36px] md:text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
@@ -217,7 +214,6 @@ const page = () => {
           </div>
         </div>
 
-        {/* FAQ Section */}
         <div className='flex flex-col items-center justify-center w-full h-fit mb-[100px]'>
           <div className='flex flex-col gap-[10px] text-center mb-[30px] px-[10px]'>
             <h1 className='font-semibold text-[32px] md:text-[40px] leading-[100%]'>All You Need To Know<br />About Checkmate</h1>
