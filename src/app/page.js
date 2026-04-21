@@ -88,7 +88,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center w-full h-fit'>
+        <div id='features' className='scroll-mt-[80px] flex flex-col items-center justify-center w-full h-fit'>
           <div className='flex flex-col gap-[10px] text-center mb-[30px] md:mb-[60px]'>
             <h1 className='font-semibold text-[36px] md:text-[40px] leading-[100%]'>Everything Checkmate<br />Does For You</h1>
             <p className='text-[14px] md:text-[16px]'>Built for every side of the classroom – teachers who<br />need control, students who need clarity.</p>
@@ -163,7 +163,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] px-[20px] md:px-[40px] rounded-xl'>
+        <div id='about' className='scroll-mt-[80px] flex flex-col items-center justify-center w-full h-fit bg-[#7DA183] py-[40px] px-[20px] md:px-[40px] rounded-xl'>
           <div className='flex flex-col gap-[10px] text-center mb-[40px] md:mb-[60px]'>
             <h1 className='font-semibold text-[36px] md:text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
             <p className='text-white text-[14px] md:text-[16px]'>Checkmate didn't come from a boardroom – it came from a classroom.<br className='hidden md:block' />Built by people who knew there had to be a better way.</p>
@@ -214,7 +214,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center w-full h-fit mb-[100px]'>
+        <div id='faqs' className='scroll-mt-[80px] flex flex-col items-center justify-center w-full h-fit mb-[100px]'>
           <div className='flex flex-col gap-[10px] text-center mb-[30px] px-[10px]'>
             <h1 className='font-semibold text-[32px] md:text-[40px] leading-[100%]'>All You Need To Know<br />About Checkmate</h1>
             <p>Frequently Asked Questions</p>

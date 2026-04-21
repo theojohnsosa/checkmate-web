@@ -23,6 +23,10 @@
   font-family: "Switzer", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
 }

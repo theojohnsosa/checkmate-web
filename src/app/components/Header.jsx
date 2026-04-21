@@ -27,6 +27,14 @@ const Header = () => {
     }
   });
 
+  const handleNavClick = (id) => {
+    setMenuOpen(false)
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth'})
+    }
+  }
+
   return (
     <>
       <header className='flex items-center justify-between w-full h-[60px] py-[15px] px-[20px] bg-[#F8F8F8] border-b-[1px] border-[#CCCCCC] mb-[20px] sticky top-0 z-50 shadow-lg'>
@@ -41,10 +49,10 @@ const Header = () => {
         </div>
         <div className='w-fit h-fit'>
           <nav className='flex gap-[20px] hidden md:flex'>
-            <Link href={'/'} className='font-semibold'>Home</Link>
-            <Link href={'/features'} className='hover:font-semibold hover:underline'>Features</Link>
-            <Link href={'/about'} className='hover:font-semibold hover:underline'>About</Link>
-            <Link href={'/faqs'} className='hover:font-semibold hover:underline'>Faqs</Link>
+            <button onClick={() => handleNavClick('home')} className='font-semibold'>Home</button>
+            <button onClick={() => handleNavClick('features')} className='hover:font-semibold hover:underline'>Features</button>
+            <button onClick={() => handleNavClick('about')} className='hover:font-semibold hover:underline'>About</button>
+            <button onClick={() => handleNavClick('faqs')} className='hover:font-semibold hover:underline'>Faqs</button>
           </nav>
         </div>
         <div className='items-center gap-[20px] hidden md:flex'>
