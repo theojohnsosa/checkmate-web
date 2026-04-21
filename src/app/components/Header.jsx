@@ -10,7 +10,8 @@ import { usePathname } from 'next/navigation'
 
 const Header = () => {
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false)
   const pathname = usePathname();
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const Header = () => {
         </div>
         <div className='items-center gap-[20px] hidden md:flex'>
           <Link href={'/login'} className='hover:font-semibold'>Login</Link>
-          <Link href={'/download'} className='flex items-center bg-[#7DA183] w-[120px] h-[40px] py-[13px] px-[22px] font-semibold text-white rounded-md hover:bg-[#A4DBAE] transition-colors'>Download</Link>
+          <button onClick={() => setShowModal(true)} className='flex items-center bg-[#7DA183] w-[120px] h-[40px] py-[13px] px-[22px] font-semibold text-white rounded-md hover:bg-[#A4DBAE] transition-colors'>Download</button>
         </div>
         <button className="md:hidden hover:cursor-pointer" onClick={() => setMenuOpen(true)}>
             <Image 
@@ -84,6 +85,25 @@ const Header = () => {
             <p className='text-black'>View source code <span className='text-[#006EF4] underline'><Link href={'https://github.com/theojohnsosa/checkmate'}>here</Link></span></p>
             <Link href={'/'} className='flex items-center justify-center bg-white text-[#7DA183] border-[2px] border-[#7DA183] rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-[#7DA183] hover:text-white hover:shadow-lg transition-colors'>Download</Link>
             <Link href={'/'} className='flex items-center justify-center bg-[#7DA183] text-white rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-white hover:text-[#7DA183] hover:border-[#7DA183] hover:shadow-lg hover:bg-[#A4DBAE] transition-colors'>Get Started</Link>
+          </div>
+        </div>
+      )}
+
+      {showModal && (
+        <div className='fixed inset-0 bg-black/50 z-[200] flex items-center justify-center px-[20px]' onClick={() => setShowModal(false)}>
+          <div className='bg-white rounded-2xl shadow-xl w-full max-w-[400px] p-[32px] flex flex-col items-center gap-[16px]' onClick={(e) => e.stopPropagation()}>
+            <div className='bg-[#FFF3CD] p-[14px] rounded-full'>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <div className='flex flex-col items-center gap-[6px] text-center'>
+              <h2 className='font-semibold text-[20px]'>Action Currently Unavailable</h2>
+              <p className='text-[#9CA3AF] text-[14px] leading-relaxed'>The download isn't available just yet. Check back soon or visit the GitHub repository to get the source code directly.</p>
+            </div>
+            <button onClick={() => setShowModal(false)} className='w-full mt-[8px] bg-[#7DA183] text-white font-semibold py-[10px] rounded-lg hover:bg-[#A4DBAE] transition-colors cursor-pointer'> Got it</button>
           </div>
         </div>
       )}
