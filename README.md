@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Checkmate
 
-## Getting Started
+The official landing page for [Checkmate](https://checkmate-attendancetracker.vercel.app/), a mobile-first attendance tracking app for Android. Built with Next.js and Tailwind CSS.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This repository contains the marketing and landing page for the Checkmate Android app. It introduces the app to teachers and students, covers key features, answers common questions, and links to the app download.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Live site:** [checkmate-attendancetracker.vercel.app](https://checkmate-attendancetracker.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Android app repository:** [github.com/theojohnsosa/checkmate](https://github.com/theojohnsosa/checkmate)
 
-## Learn More
+## Sections
 
-To learn more about Next.js, take a look at the following resources:
+- **Hero** — Headline, subtext, and primary call-to-action
+- **Features** — Key capabilities for both teachers and students
+- **About** — Background on the app and what it solves
+- **FAQ** — Categorized frequently asked questions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Component | Technology |
+|-----------|------------|
+| Framework | Next.js (App Router) |
+| Styling | Tailwind CSS |
+| Deployment | Vercel |
 
-## Deploy on Vercel
+## Authors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Theojohn Sosa** — [theojohnsosa](https://github.com/theojohnsosa)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Made with ❤️ by the Checkmate Team
