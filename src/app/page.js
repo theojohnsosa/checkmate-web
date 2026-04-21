@@ -61,7 +61,7 @@ const page = () => {
     <>
       <main className='flex flex-col items-center w-full px-[20px] min-h-screen bg-[#F8F8F8] gap-[70px] md:gap-[100px]'>
 
-        <div className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
+        <div id='home' className='relative flex flex-col items-center justify-center w-full h-fit bg-gradient-to-b from-[#7DA183] to-[#315136] rounded-2xl overflow-hidden shadow-2xl'>
           <Image className='w-full h-full object-cover rounded-2xl absolute inset-0 z-0'
             src='background-texture.svg'
             alt='Background Texture'

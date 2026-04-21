@@ -49,7 +49,7 @@ const Header = () => {
         </div>
         <div className='w-fit h-fit'>
           <nav className='flex gap-[20px] hidden md:flex'>
-            <button onClick={() => handleNavClick('home')} className='font-semibold'>Home</button>
+            <button onClick={() => handleNavClick('home')} className='hover:font-semibold hover:underline'>Home</button>
             <button onClick={() => handleNavClick('features')} className='hover:font-semibold hover:underline'>Features</button>
             <button onClick={() => handleNavClick('about')} className='hover:font-semibold hover:underline'>About</button>
             <button onClick={() => handleNavClick('faqs')} className='hover:font-semibold hover:underline'>Faqs</button>
@@ -84,10 +84,10 @@ const Header = () => {
             width={160}
             height={46} />
           <div className='flex flex-col mt-[50px] leading-[50px]'>
-            <Link href='/' className={pathname === '/' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>HOME</Link>
-            <Link href='/features' className={pathname === '/features' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FEATURES</Link>
-            <Link href='/about' className={pathname === '/about' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>ABOUT</Link>
-            <Link href='/faqs' className={pathname === '/faqs' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FAQS</Link>
+            <button onClick={() => handleNavClick('home')} className={pathname === '/' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>HOME</button>
+            <button onClick={() => handleNavClick('features')} className={pathname === '/features' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FEATURES</button>
+            <button onClick={() => handleNavClick('about')} className={pathname === '/about' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>ABOUT</button>
+            <button onClick={() => handleNavClick('faqs')} className={pathname === '/faqs' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FAQS</button>
           </div>
           <div className='flex flex-col items-center justify-center gap-[10px] mt-auto'>
             <p className='text-black'>View source code <span className='text-[#006EF4] underline'><Link href={'https://github.com/theojohnsosa/checkmate'}>here</Link></span></p>
