@@ -11,7 +11,7 @@ import { usePathname } from 'next/navigation'
 const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showModal, setShowModal] = useState(false)
+  const [modalType, setModalType] = useState(null)
   const pathname = usePathname();
 
   useEffect(() => {
@@ -48,8 +48,8 @@ const Header = () => {
           </nav>
         </div>
         <div className='items-center gap-[20px] hidden md:flex'>
-          <Link href={'/login'} className='hover:font-semibold'>Login</Link>
-          <button onClick={() => setShowModal(true)} className='flex items-center bg-[#7DA183] w-[120px] h-[40px] py-[13px] px-[22px] font-semibold text-white rounded-md hover:bg-[#A4DBAE] transition-colors'>Download</button>
+          <button onClick={() => setModalType('login')} className='hover:font-semibold'>Login</button>
+          <button onClick={() => setModalType('download')} className='flex items-center bg-[#7DA183] w-[120px] h-[40px] py-[13px] px-[22px] font-semibold text-white rounded-md hover:bg-[#A4DBAE] transition-colors'>Download</button>
         </div>
         <button className="md:hidden hover:cursor-pointer" onClick={() => setMenuOpen(true)}>
             <Image 
@@ -83,13 +83,13 @@ const Header = () => {
           </div>
           <div className='flex flex-col items-center justify-center gap-[10px] mt-auto'>
             <p className='text-black'>View source code <span className='text-[#006EF4] underline'><Link href={'https://github.com/theojohnsosa/checkmate'}>here</Link></span></p>
-            <Link href={'/'} className='flex items-center justify-center bg-white text-[#7DA183] border-[2px] border-[#7DA183] rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-[#7DA183] hover:text-white hover:shadow-lg transition-colors'>Download</Link>
+            <button onClick={() => setModalType('download')} className='flex items-center justify-center bg-white text-[#7DA183] border-[2px] border-[#7DA183] rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-[#7DA183] hover:text-white hover:shadow-lg transition-colors'>Download</button>
             <Link href={'/'} className='flex items-center justify-center bg-[#7DA183] text-white rounded-lg py-[10px] px-[60px] font-semibold w-full hover:bg-white hover:text-[#7DA183] hover:border-[#7DA183] hover:shadow-lg hover:bg-[#A4DBAE] transition-colors'>Get Started</Link>
           </div>
         </div>
       )}
 
-      {showModal && (
+      {modalType && (
         <div className='fixed inset-0 bg-black/50 z-[200] flex items-center justify-center px-[20px]' onClick={() => setShowModal(false)}>
           <div className='bg-white rounded-2xl shadow-xl w-full max-w-[400px] p-[32px] flex flex-col items-center gap-[16px]' onClick={(e) => e.stopPropagation()}>
             <div className='bg-[#FFF3CD] p-[14px] rounded-full'>
@@ -101,9 +101,13 @@ const Header = () => {
             </div>
             <div className='flex flex-col items-center gap-[6px] text-center'>
               <h2 className='font-semibold text-[20px]'>Action Currently Unavailable</h2>
-              <p className='text-[#9CA3AF] text-[14px] leading-relaxed'>The download isn't available just yet. Check back soon or visit the GitHub repository to get the source code directly.</p>
+              {modalType === 'download' ? (
+                <p className='text-[#9CA3AF] text-[14px] leading-relaxed'>No download is available yet. You can clone the GitHub Repository to try the prototype locally.</p>
+              ) : (
+                <p className='text-[#9CA4AF] text-[14px] leading-relaxed'>Account creation is only available through the Android app. No download is available yet, but you can clone the GitHub repository to try the prototype locally.</p>
+              )}
             </div>
-            <button onClick={() => setShowModal(false)} className='w-full mt-[8px] bg-[#7DA183] text-white font-semibold py-[10px] rounded-lg hover:bg-[#A4DBAE] transition-colors cursor-pointer'> Got it</button>
+            <button onClick={() => setModalType(null)} className='w-full mt-[8px] bg-[#7DA183] text-white font-semibold py-[10px] rounded-lg hover:bg-[#A4DBAE] transition-colors cursor-pointer'> Got it</button>
           </div>
         </div>
       )}
