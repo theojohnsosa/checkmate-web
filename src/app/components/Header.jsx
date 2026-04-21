@@ -68,6 +68,7 @@ const Header = () => {
             />
         </button>
       </header>
+
       {menuOpen && (
         <div className='fixed top-0 right-0 h-full w-70 bg-[#F2F0EF] border-l border-[#E0E0E0] z-100 shadow-lg flex flex-col py-[20px] px-[20px]'>
           <button className='flex justify-end hover:cursor-pointer' onClick={() => setMenuOpen(false)}>
@@ -84,7 +85,7 @@ const Header = () => {
             width={160}
             height={46} />
           <div className='flex flex-col mt-[50px] leading-[50px]'>
-            <button onClick={() => handleNavClick('home')} className={pathname === '/' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>HOME</button>
+            <button onClick={() => handleNavClick('home')} className={pathname === '/home' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>HOME</button>
             <button onClick={() => handleNavClick('features')} className={pathname === '/features' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FEATURES</button>
             <button onClick={() => handleNavClick('about')} className={pathname === '/about' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>ABOUT</button>
             <button onClick={() => handleNavClick('faqs')} className={pathname === '/faqs' ? 'text-[40px] font-semibold' : 'text-[40px] text-[#CCC3C3] hover:text-[#777777] hover:font-medium transition-colors'}>FAQS</button>
