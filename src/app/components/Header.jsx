@@ -69,7 +69,7 @@ const Header = () => {
               height={22}
             />
           </button>
-          <Image className='flex mx-auto mt-[40px]' 
+          <Image className='flex mt-[40px]' 
             src={'sidebar-logo.svg'}
             alt='Checkmate Logo'
             width={160}
