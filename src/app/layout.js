@@ -17,6 +17,9 @@ const switzer = localFont({
 export const metadata = {
   title: "Checkmate",
   description: "Classroom Attendance Tracking",
+  icons: {
+    icon: "/tab-icon.svg",
+  }
 };
 
 export default function RootLayout({ children }) {
