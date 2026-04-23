@@ -1,9 +1,18 @@
+"use client"
+
 import React from 'react'
 
 import Link from 'next/link'
 import Image from 'next/image'
 
 const Footer = () => {
+  const handleNavClick = (id) => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       <footer className='flex flex-col md:flex-row justify-between w-full h-fit py-[60px] px-[50px] bg-[#7DA183]'>
@@ -28,12 +37,12 @@ const Footer = () => {
         <div className='flex flex-row gap-[60px] mb-[50px] md:mb-[0px]'>
           <div className='flex flex-col'>
             <h3 className='font-medium text-[#D9D9D9] mb-[20px]'>Quick Links</h3>
-            <Link className='font-medium text-white mb-[10px] hover:underline' href={'/'}>Home</Link>
-            <Link className='font-medium text-white mb-[10px] hover:underline' href={'/features'}>Features</Link>
-            <Link className='font-medium text-white mb-[10px] hover:underline' href={'/about'}>About</Link>
-            <Link className='font-medium text-white mb-[10px] hover:underline' href={'/faqs'}>Faqs</Link>
-            <Link className='font-medium text-white mb-[10px] hover:underline' href={'/faqs'}>Download</Link>
-            <Link className='font-medium text-white hover:underline' href={'/faqs'}>Book a Call</Link>
+            <button className='font-medium text-white mb-[10px] hover:underline' onClick={() => handleNavClick('home')}>Home</button>
+            <button className='font-medium text-white mb-[10px] hover:underline' onClick={() => handleNavClick('features')}>Features</button>
+            <button className='font-medium text-white mb-[10px] hover:underline' onClick={() => handleNavClick('about')}>About</button>
+            <button className='font-medium text-white mb-[10px] hover:underline' onClick={() => handleNavClick('faqs')}>Faqs</button>
+            <button className='font-medium text-white mb-[10px] hover:underline'>Download</button>
+            <button className='font-medium text-white hover:underline'>Book a Call</button>
           </div>
           <div className='flex flex-col'>
             <h3 className='font-medium text-[#D9D9D9] mb-[20px]'>Information</h3>
