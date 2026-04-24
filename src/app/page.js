@@ -168,8 +168,8 @@ const page = () => {
             <h1 className='font-semibold text-[36px] md:text-[40px] text-white leading-[100%]'>The Story Behind<br />Checkmate</h1>
             <p className='text-white text-[14px] md:text-[16px]'>Checkmate didn't come from a boardroom – it came from a classroom.<br className='hidden md:block' />Built by people who knew there had to be a better way.</p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-[20px] w-full'>
-            <div className='w-full h-fit p-[30px] bg-white rounded-xl'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-[20px] w-full items-stretch'>
+            <div className='w-full h-full p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
                 <div className='bg-[#7DA183] p-[10px] rounded-xl flex-shrink-0'>
                   <Image
@@ -183,7 +183,7 @@ const page = () => {
               </div>
               <p>Classrooms were drowning in clipboards and spreadsheets. Teachers wasted precious minutes on roll call. Students found ways to slip through the cracks. Something had to change.</p>
             </div>
-            <div className='w-full h-fit p-[30px] bg-white rounded-xl'>
+            <div className='w-full h-full p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
                 <div className='bg-[#7DA183] p-[10px] rounded-xl flex-shrink-0'>
                   <Image
@@ -197,7 +197,7 @@ const page = () => {
               </div>
               <p>What if attendance could track itself? What if students were actually motivated to show up on time? Checkmate was born from those questions — built by students who lived the problem firsthand.</p>
             </div>
-            <div className='w-full h-fit p-[30px] bg-white rounded-xl'>
+            <div className='w-full h-full p-[30px] bg-white rounded-xl'>
               <div className='flex flex-row items-center gap-[14px] mb-[20px]'>
                 <div className='bg-[#7DA183] p-[10px] rounded-xl flex-shrink-0'>
                   <Image
