@@ -4,10 +4,24 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import { useState } from 'react'
+
 const Footer = () => {
+  const [copied, setCopied] = useState(false)
+
   const handleNavClick = (id) => {
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('theojohnsosa@gmail.com')
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (error) {
+      console.error('Failed to copy: ', error)
+    }
   }
 
   return (
@@ -21,11 +35,16 @@ const Footer = () => {
             Book a Call
           </Link>
           <h3 className='font-medium text-[#D9D9D9] mb-[10px] md:mb-[20px]'>Or email us at</h3>
-          <Link className='flex items-center justify-center gap-[6px] w-fit h-[40px] py-[10px] px-[22px] bg-white text-[#7DA183] shadow-md font-semibold rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[50px] md:mb-[40px] hover:text-black'
-            href={'/'}>
-            theojohnsosa@gmail.com
-            <Image src={'copy.svg'} alt='Copy Icon' width={16} height={16} />
-          </Link>
+          <button
+            onClick={handleCopyEmail}
+            className='flex items-center justify-center gap-[6px] w-fit h-[40px] py-[10px] px-[22px] bg-white text-[#7DA183] shadow-md font-semibold rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[50px] md:mb-[40px] hover:text-black'
+          >
+            {copied ? 'Copied!' : 'theojohnsosa@gmail.com'}
+            {copied
+              ? <span className='text-[#7DA183] text-[16px]'>✓</span>
+              : <Image src={'copy.svg'} alt='Copy Icon' width={16} height={16} />
+            }
+          </button>
         </div>
         <div className='flex flex-row gap-[60px] mb-[50px] md:mb-[0px]'>
           <div className='flex flex-col'>
