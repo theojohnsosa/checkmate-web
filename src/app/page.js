@@ -56,6 +56,7 @@ const FAQItem = ({ question, answer }) => {
 }
 
 const page = () => {
+  const [modalType, setModalType] = useState(null)
 
   return (
     <>
@@ -71,15 +72,14 @@ const page = () => {
             <p className='flex items-center justify-center bg-[#E3E6E3] w-[107px] md:w-[140px] h-[30px] md:h-[40px] py-[10px] px-[32px] text-[12px] md:text-[16px] rounded-full font-medium'>Education</p>
             <h1 className='font-semibold text-[40px] sm:text-[50px] md:text-[60px] leading-[90%] text-center text-white w-full max-w-[700px]'>Mark present. Move forward. No more messy sheets</h1>
             <p className='text-white text-center text-[14px] md:text-base max-w-[480px]'>Mark attendance in seconds, spot patterns instantly, and keep everything in one place – no spreadsheets, no clipboards, no hassle.</p>
-            <Link className='flex items-center justify-center gap-[6px] w-[150px] h-[40px] py-[10px] px-[22px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
-              href={'/'}>
+            <button className='flex items-center justify-center gap-[6px] w-[150px] h-[40px] py-[10px] px-[22px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]' onClick={() => setModalType('demo')}>
               See Demo
               <Image
                 src={'arrow.svg'}
                 alt='Right Arrow'
                 width={16}
                 height={16} />
-            </Link>
+            </button>
             <Image
               src={'hero-image.svg'}
               alt='Checkmate Mockup'
@@ -220,14 +220,16 @@ const page = () => {
             <p>Frequently Asked Questions</p>
           </div>
           <div className='flex flex-row items-center justify-center gap-[20px]'>
-            <Link className='flex items-center justify-center w-[150px] h-[40px] py-[10px] px-[20px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
-              href={'/'}>
+            <button className='flex items-center justify-center w-[150px] h-[40px] py-[10px] px-[20px] bg-[#7DA183] shadow-md font-semibold text-white rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
+              onClick={() => setModalType('get-started')}
+            >
               Get started
-            </Link>
-            <Link className='flex items-center justify-center w-[150px] h-[40px] py-[10px] px-[20px] bg-[#FFFFFF] border border-[#7DA183] shadow-md font-semibold text-black rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
-              href={'/'}>
+            </button>
+            <button className='flex items-center justify-center w-[150px] h-[40px] py-[10px] px-[20px] bg-[#FFFFFF] border border-[#7DA183] shadow-md font-semibold text-black rounded-md hover:shadow-lg hover:bg-[#A4DBAE] transition-colors mb-[40px]'
+              onClick={() => setModalType('book-a-call')}
+            >
               Book a Call
-            </Link>
+            </button>
           </div>
           <div className='flex flex-col items-center w-full md:w-[800px] h-fit gap-[10px] md:gap-[20px]'>
             {faqs.map((faq, index) => (
@@ -237,6 +239,29 @@ const page = () => {
         </div>
 
       </main>
+
+      {modalType && (
+        <div className='fixed inset-0 bg-black/50 z-[200] flex items-center justify-center px-[20px]' onClick={() => setModalType(null)}>
+          <div className='bg-white rounded-2xl shadow-xl w-full max-w-[400px] p-[32px] flex flex-col items-center gap-[16px]' onClick={(e) => e.stopPropagation()}>
+            <div className='bg-[#FFF3CD] p-[14px] rounded-full'>
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+            </div>
+            <div className='flex flex-col items-center gap-[6px] text-center'>
+              <h2 className='font-semibold text-[20px]'>Action Currently Unavailable</h2>
+              {modalType === 'demo' ? (
+                <p className='text-[#9CA3AF] text-[14px] leading-relaxed'>Demo is currently unavailable. You can clone the GitHub repository to try the prototype locally.</p>
+              ) : (
+                <p className='text-[#9CA3AF] text-[14px] leading-relaxed'>This action is currently unavailable, but you can clone the GitHub repository to try the prototype locally.</p>
+              )}
+            </div>
+            <button onClick={() => setModalType(null)} className='w-full mt-[8px] bg-[#7DA183] text-white font-semibold py-[10px] rounded-lg hover:bg-[#A4DBAE] transition-colors cursor-pointer'>Got it</button>
+          </div>
+        </div>
+      )}
     </>
   )
 }
